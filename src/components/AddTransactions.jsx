@@ -1,14 +1,28 @@
-import React, {useState} from 'react'
+import React, { useState, useContext} from "react";
+import { v4 as uuidv4 } from "uuid";
+import { Context } from '../Context'
 
 export const AddTransactions = () => {
     const [text, setText] = useState("")
     const [amount, setAmount]  = useState(0)
 
+    const {addTransaction} = useContext(Context)
+
+    function handleSubmit(e){
+        e.preventDefault()
+        const newTransaction = {
+          id: uuidv4(),
+          text,
+          amount: +amount,
+        };
+        addTransaction(newTransaction)
+    }
+
   return (
     <div>
       <h4>Add New Transaction</h4>
       <hr></hr>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="description">Description</label>
           <br></br>
@@ -30,7 +44,9 @@ export const AddTransactions = () => {
             placeholder="Enter Amount"
           />
         </div>
-        <button type="submit">Add Transaction</button>
+        <button type="submit">
+          Add Transaction
+        </button>
       </form>
     </div>
   );
