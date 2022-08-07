@@ -4,7 +4,7 @@ import { Context } from '../Context'
 
 export const AddTransactions = () => {
     const [text, setText] = useState("")
-    const [amount, setAmount]  = useState(0)
+    const [amount, setAmount]  = useState(-1)
 
     const {addTransaction} = useContext(Context)
 
