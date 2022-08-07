@@ -1,4 +1,4 @@
-# Movie Watchlist App
+# Expense App
 
 ## Table of contents
 
@@ -12,14 +12,13 @@
 
 ## Overview
 
-The movie watchlist app allows users to search any movie of their choice using the title and saving their favourites to a watchlist, as a reference.
+Tired of wondering where your money went to? Worry no more.
+The Expense Tracker App let's you track your income and expenses by keeping a history of all transactions you entered.
 
 ### Screenshot
 
-![Home Page](./screenshots/home-empty.png?raw=true)
-![Home page after search](./screenshots/home-full.png?raw=true)
-![Empty watchlist](./screenshots/watchlist-empty.png?raw=true)
-![Watchlist with a movie added](./screenshots/watchlist.png?raw=true)
+![screenshot1](./src/images/screenshot1.png?raw=true)
+![screenshot2](./src/images/screenshot2.png?raw=true)
 
 
 ## My process
@@ -27,19 +26,22 @@ The movie watchlist app allows users to search any movie of their choice using t
 ### Built with
 
 - HTML5
+- CSS
 - React.JS
-- Tailwind CSS
-By building this, I tested my knowledge of basic react topics like useState, React Forms and advanced topics like useContext and React Router Dom.
+- React Context API
+- Vite
+
+By building this, I tested my knowledge of basic react topics like useState, React Forms and advanced topics like React Context API, and useReducer.
 
 ### Continued development
-I planned to make this application a full-stack app where it can allow users to store their favourite movies in their Watchlist, which they can visit any time and make changes.
+I planned to make this application a full-stack app where it can allow for authentication and storing of user's expense history in a database.
 
 
 ### Useful resources
 
-- [Scrimba](https://www.scrimba.com) - Scrimba is one of the best platforms out there for learning front end web developement. I am currently enrolled in the front end developer career path offered by Scrimba.
+- [Scrimba](https://www.scrimba.com) - Scrimba is one of the best platforms out there for learning front end web developement.
 
-- [View Project Here](https://movie-watchlist-app-ilivenoble.vercel.app)
+- [View Project Here](https://expense-tracker-ilivenoble.vercel.app/)
 
 ## Author
 
