@@ -7,10 +7,9 @@ import { AddTransactions } from "./components/AddTransactions"
 import './App.css'
 
 function App() {
-
-
+ 
   return (
-    <div>
+    <div className="main-container">
       <Header />
       <div className="container">
         <Balance />
@@ -19,7 +18,7 @@ function App() {
         <AddTransactions />
       </div>
     </div>
-  )
+  );
 }
 
 export default App

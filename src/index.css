@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;700&family=Pacifico&display=swap');
+
+html, body {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Catamaran', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: white;
+}
+
+.main-container {
+  background-color: #2A2B2A;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+.main-dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.container{
+  padding: 0 2em;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 1em;
+  color: #fff;
+  text-shadow: 3px 3px #294936;
+}
+header p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 2em;
+  margin: 0;
+  color: #F3FAE1;
+  text-shadow: 1px 1px #000;
+}
+
+header {
+  background-image: url(./images/expense-tracker-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  background-position: center;
+  opacity: .9;
+}
+
+
+.bal {
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+.bal-info {
+  font-size: 2rem;
+}
+
+.income-expense {
+  background-color: #eff;
+  padding:0 1em;
+  color: #2A2B2A;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: .5em;
+  justify-content: space-between;
+}
+
+.income, .expense {
+  font-size: 1.5rem;
+}
+
+.income-info, .expense-info {
+  font-size: 1.2rem;
+  color: #000;
+}
+.income-info{
+  color: green;
+}
+.expense-info {
+  color: red;
+}
+
+.history {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+#transactions {
+  position: relative;
+  color: #000;
+  padding: 0.5em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: .5em;
+}
+
+#transactions:hover {
+  background-color: gainsboro;
+}
+
+.transaction-desc, .transaction-amount {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.delete-btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  position: relative;
+  background: rgb(204, 28, 28);
+  color: #fff;
+  outline: none;
+  top: -35px;
+  left: 0px;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.transaction-container:hover .delete-btn {
+  opacity: 1;
+}
+
+/* .hide {
+  display: none;
+} */
+
+.plus {
+  border-right: 5px solid green;
+}
+.minus {
+  border-right: 5px solid red;
+}
+
+.delete-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.delete-all-btn {
+  background-color: red;
+  color: white;
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: .5em 0;
+  font-weight: bold;
+}
+
+.delete-all-btn:hover, .delete-all-btn:focus {
+  background-color: darkred;
+}
+
+.add-transaction {
+  font-size: 1.5rem;
+  
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.form-input input {
+  width: 100%;
+  padding: .5em 0;
+  margin: 0 0;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+}
+.form-input input:hover, .form-input input:focus {
+  background-color: azure;
+}
+
+.form-input input::-webkit-input-placeholder {
+  padding-left: .5em;
+}
+
+.form-input label {
+  align-self: flex-start;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.add-transaction-btn {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: .5em 0;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  background: green;
+  margin-bottom: 3em;
+  cursor: pointer;
+}
+
+.add-transaction-btn:hover, .add-transaction-btn:active {
+  background-color: #008888;
+}
+
+
+@media (min-width: 850px) {
+
+  body {
+      font-size: 18px;
+    }
+  .container {
+      padding: 0 8em;
+    }
+
+  .form-input {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+    .form-input input {
+      width: 50%;
+    }
+
+    .form-input label {
+      justify-self: end;
+    }
+
+    .form-input input::-webkit-input-placeholder {
+          padding-left: .5em;
+        }
+
+    
+}

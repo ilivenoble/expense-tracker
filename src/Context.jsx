@@ -1,30 +1,33 @@
 import React, { createContext, useReducer } from "react";
 
 const initialState = {
-    transactions: [
-        {id : 1, text:"salary", amount: 5000},
-        {id : 2, text:"gas", amount: -1000},
-        {id : 3, text:"bonus", amount: 2000},
-        {id : 4, text:"data", amount: -2000}
-    ]
+    transactions: []
 }
 
 function reducer(state, action){
-    switch(action.type){
-        case "DELETE_TRANSACTION":
+    switch (action.type) {
+      case "DELETE_TRANSACTION":
         return {
-            ...state,
-            transactions: state.transactions.filter(item => item.id !== action.payload)
-        }
+          ...state,
+          transactions: state.transactions.filter(
+            (item) => item.id !== action.payload
+          ),
+        };
 
-        case "ADD_TRANSACTION": 
+      case "ADD_TRANSACTION":
         return {
-            ...state,
-            transactions: [action.payload, ...state.transactions]
-        }
+          ...state,
+          transactions: [action.payload, ...state.transactions],
+        };
 
-        default:
-            return state
+      case "DELETEALL_TRANSACTION":
+        return {
+          ...state,
+          transactions: [],
+        };
+
+      default:
+        return state;
     }
 }
 
@@ -48,12 +51,19 @@ function ContextProvider({children}) {
         });
     }
 
+    function deleteAllTransactions(){
+        dispatch({
+          type: "DELETEALL_TRANSACTION",
+        });
+    }
+
     return (
       <Context.Provider
         value={{
           transactions: state.transactions,
           deleteTransaction,
-          addTransaction
+          addTransaction,
+          deleteAllTransactions
         }}
       >
         {children}
